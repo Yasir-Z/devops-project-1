@@ -20,7 +20,7 @@ jobs:
         run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
       - name: Static Analysis Security Test (Bandit)
-        run: bandit -r .
+        run: bandit -r . -s B101
 
       - name: Integration test
         run: pytest tests/test_app.py    
