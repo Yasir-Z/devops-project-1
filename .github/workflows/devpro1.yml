@@ -1,0 +1,15 @@
+name: Devops project 1
+
+on: push
+jobs:
+  devpro1-ci-pipeline
+    runs-on: ubuntu-latest
+
+    - steps:
+        - uses: actions/checkoutv@4
+
+    - name: Set-up python
+      run: actions/setup-python@v4
+
+    - name: Install dependencies 
+      run: pip install -r requirements.txt
