@@ -15,6 +15,9 @@ jobs:
 
     - name: install dependencies 
       run: pip install -r requirements.txt
-# Run the app
+
+    - name: set up python
+      run: actions/setup-python@v5
+
     - name: run the app
       run: python app.py
